@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | Objnews</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    .wiki-bar { background: #eee; padding: 10px; border-bottom: 1px solid #ccc; font-family: sans-serif; }
+    .article-body { padding: 20px; max-width: 800px; margin: auto; line-height: 1.6; }
+    .review-tag { color: white; background: #d33; padding: 3px 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="wiki-bar">
+    <strong>Objnews Wire</strong> | 
+    <a href="{{ site.baseurl }}/">← Back to Home</a> | 
+    <a href="https://github.com/{{ site.github.repository_nwo }}/edit/main/{{ page.path }}">Edit</a> |
+    <a href="https://github.com/{{ site.github.repository_nwo }}/commits/main/{{ page.path }}">History</a>
+  </div>
+
+  <div class="article-body">
+    <h1>{{ page.title }}</h1>
+    <hr>
+    {{ content }}
+  </div>
+</body>
+</html>
