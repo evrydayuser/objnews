@@ -1,4 +1,6 @@
 theme: jekyll-theme-cayman
+
+github: [show_downloads: false]
 collections:
   articles:
     output: true
