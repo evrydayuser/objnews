@@ -1,0 +1,353 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikinews</sitename>
+    <dbname>enwikinews</dbname>
+    <base>https://en.wikinews.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikinews</namespace>
+      <namespace key="5" case="first-letter">Wikinews talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="90" case="first-letter">Thread</namespace>
+      <namespace key="91" case="first-letter">Thread talk</namespace>
+      <namespace key="92" case="first-letter">Summary</namespace>
+      <namespace key="93" case="first-letter">Summary talk</namespace>
+      <namespace key="100" case="first-letter">Portal</namespace>
+      <namespace key="101" case="first-letter">Portal talk</namespace>
+      <namespace key="102" case="first-letter">Comments</namespace>
+      <namespace key="103" case="first-letter">Comments talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+      <namespace key="2600" case="first-letter">Topic</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Review</title>
+    <ns>10</ns>
+    <id>52072</id>
+    <revision>
+      <id>4988670</id>
+      <parentid>4982498</parentid>
+      <timestamp>2026-02-23T18:06:57Z</timestamp>
+      <contributor>
+        <username>Asked42</username>
+        <id>2864219</id>
+      </contributor>
+      <comment>mentioning both the legacy EzPR and EzPR 2025.</comment>
+      <origin>4988670</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3258" sha1="fi7ptqj44p3iujdued15uzb6w1yngu9" xml:space="preserve">{{xambox
+|image = [[File:Artículo bueno.svg|40px|link=]]
+|type = notice
+|id= review
+|text =
+&lt;div style="font-size:125%; padding-top: 6px;"&gt;'''This article is waiting for review!'''&lt;/div&gt;
+
+This article requires pre-publication review by an uninvolved reviewer (someone not substantially involved in writing the article). {{#ifexpr:{{PAGESINCATEGORY:Review}}&gt;1|There are currently '''[[:Category:Review|{{PAGESINCATEGORY:Review}} articles]]''' in the review queue.|This is currently the only article in the review queue.}}
+
+If the article is accepted, it will be published; If declined, feedback will be posted on the [[{{TALKPAGENAME}}|talk page]]. You may continue improving the article while it awaits review.
+
+&lt;div data-expandtext="Show tips" data-collapsetext="Hide" class="toccolours mw-collapsible mw-collapsed" style="margin-top: 10px;"&gt;
+'''While waiting, how you can help:'''
+&lt;div class="mw-collapsible-content" style="margin: 10px 0;"&gt;
+'''Self-check your article:'''
+* [[WN:Copyright|Copyright issues]] — No copyrighted text from sources
+* [[WN:Newsworthiness|Newsworthiness]] — Recent and relevant
+* [[WN:Source|Verifiability]] — Properly cited reliable sources
+* [[WN:NPOV|Neutrality]] — Balanced and unbiased
+* [[WN:Style guide|Style]] — Follows Wikinews conventions
+
+'''Help others get published:'''
+If your article is solid, consider giving another draft a [[Template:Pre-review|pre-review]]. Even small fixes help — proofreading, clarifying sources, or checking attribution. Collaborative review gets everyone's work published faster.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-expandtext="Show instructions" data-collapsetext="Hide" class="toccolours mw-collapsible mw-collapsed" style="margin-top: 10px;"&gt;
+'''Instructions for Reviewers:'''
+&lt;div class="mw-collapsible-content" style="margin: 10px 0;"&gt;
+Only [[Wikinews:Reviewer|qualified reviewers]] may perform reviews and publish articles. To request reviewer rights, [[Wikinews:Flagged revisions/Requests for permissions|apply here]].
+
+'''Review checklist:'''
+* Reviewers, please use the '''legacy Easy Peer Review''' ([[Template:Peer reviewed|documentation]]) or the '''Easy Peer Review 2025''' ([[WN:EzPR 2025|documentation]]) for reviews.
+* '''Last edited:''' {{#time:j M Y, G:i:s|{{REVISIONTIMESTAMP}}}} UTC ([{{fullurl:{{FULLPAGENAME}}|action=purge}} purge])
+* Check [{{fullurl:{{TALKPAGENAME}}|action=history}} talk page history] for context
+* '''Copyright check:''' [https://copyvios.toolforge.org/?lang=en&amp;project=wikinews&amp;title={{FULLPAGENAMEE}}&amp;oldid=&amp;action=search&amp;use_engine=1&amp;use_links=1&amp;turnitin=0 Earwig's copyvio tool]
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div style="margin-top: 15px; display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top:15px; margin-bottom: 10px;"&gt;
+&lt;div&gt;{{Clickable button|Copyedit an Article|url=https://en.wikinews.org/wiki/{{FULLPAGENAMEE}}?withJS=MediaWiki:SubmitWizard.js&amp;helpabandoned=1|class=mw-ui-progressive}}&lt;/div&gt;
+&lt;div&gt;{{Clickable button|Pre Review|url=https://en.wikinews.org/wiki/{{FULLPAGENAMEE}}?withJS=MediaWiki:SubmitWizard.js&amp;pre-review=1|class=mw-ui-progressive}}&lt;/div&gt;
+&lt;/div&gt;
+}}
+&lt;includeonly&gt;{{#if: {{{nocat|}}}||[[Category:Review]][[Category:Articles not disputed]]}}__NOINDEX__&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+      <sha1>fi7ptqj44p3iujdued15uzb6w1yngu9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Published</title>
+    <ns>10</ns>
+    <id>11004</id>
+    <redirect title="Template:Publish" />
+    <revision>
+      <id>364933</id>
+      <parentid>364683</parentid>
+      <timestamp>2007-01-17T23:19:23Z</timestamp>
+      <contributor>
+        <username>Bawolff</username>
+        <id>1933</id>
+      </contributor>
+      <minor/>
+      <comment>Protected "[[Template:Published]]": I know this isn't the main template, but still, no one should ever move or touch this template. Ohh! shny new cascading protection button [edit=sysop:move=sysop]</comment>
+      <origin>364933</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" sha1="flh2isi8cz9yqtdht31mut8qzxyqmwh" xml:space="preserve">#REDIRECT [[Template:Publish]]</text>
+      <sha1>flh2isi8cz9yqtdht31mut8qzxyqmwh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Source</title>
+    <ns>10</ns>
+    <id>1157</id>
+    <revision>
+      <id>4865387</id>
+      <parentid>4550412</parentid>
+      <timestamp>2025-06-21T05:11:34Z</timestamp>
+      <contributor>
+        <username>Leaderboard</username>
+        <id>932513</id>
+      </contributor>
+      <comment>https://en.wikinews.org/wiki/Template_talk:Source#Edit_request</comment>
+      <origin>4865387</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1296" sha1="dbnv0sq9nw85dlxscrkiasrf4wf4081" xml:space="preserve">&lt;includeonly&gt;&lt;span class="sourceTemplate"&gt;{{#if:{{{author|}}}|{{#switch:1|{{#ifeq:{{{author}}}|{{{cased author|}}}|1}}={{source/fixauthor|author={{{author}}}}}|{{#if:{{source/uc?|{{{author}}}}}|1}}={{source/ucauthor|author={{{author}}}}}|#default={{{author}}}}}.}} {{#switch:{{lc:{{{brokenURL|}}}}}|yes={{source/broken|title={{{title}}}|url={{{url}}}}}{{source/archived|archivedescription={{{archivedescription|}}}|archiveurl={{{archiveurl}}}|title={{{title}}}}}|true={{source/broken|title={{{title}}}|url={{{url}}}}}{{source/archived|archivedescription={{{archivedescription|}}}|archiveurl={{{archiveurl}}}|title={{{title}}}}}|1={{source/broken|title={{{title}}}|url={{{url}}}}}{{source/archived|archivedescription={{{archivedescription|}}}|archiveurl={{{archiveurl}}}|title={{{title}}}}}|#default=[{{{url}}} {{{title}}}]}} &amp;mdash;&amp;nbsp;{{#if:{{{pub|{{{publisher|}}}}}}|{{source/pub|target={{{pubtarget|{{{pub|{{{publisher}}}}}}}}}|pub={{{pub|{{{publisher}}}}}}|nocat={{{nocat|}}}}}}} {{{date}}}{{#if:{{{medium|}}}|{{source/medium|medium={{{medium}}}|lang={{{lang|}}}}}}}{{#if:{{{lang|}}}|{{source/lang|lang={{{lang}}}}}}}{{#if:{{{commons|}}}|{{source/commons|commons={{{commons}}}}}}}{{#if:{{{url|}}}{{{nocat|}}}||{{source/nourl}}}}&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}&lt;/noinclude&gt;</text>
+      <sha1>dbnv0sq9nw85dlxscrkiasrf4wf4081</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Developing</title>
+    <ns>10</ns>
+    <id>11005</id>
+    <redirect title="Template:Develop" />
+    <revision>
+      <id>89224</id>
+      <timestamp>2005-06-02T22:11:30Z</timestamp>
+      <contributor>
+        <username>Kevin Baas</username>
+        <id>1555</id>
+      </contributor>
+      <comment>Template:Developing moved to Template:Develop</comment>
+      <origin>89224</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="31" sha1="b9uffur8pgr85iktp63hbfeq98zkbzj" xml:space="preserve">#REDIRECT [[Template:Develop]]
+</text>
+      <sha1>b9uffur8pgr85iktp63hbfeq98zkbzj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Review/doc</title>
+    <ns>10</ns>
+    <id>1314549</id>
+    <revision>
+      <id>4615686</id>
+      <parentid>4492687</parentid>
+      <timestamp>2021-04-16T00:10:20Z</timestamp>
+      <contributor>
+        <username>Cromium</username>
+        <id>7186</id>
+      </contributor>
+      <comment>Added from template</comment>
+      <origin>4615686</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="876" sha1="j8n947424d9n2nx3d9ags07m0o8qgoz" xml:space="preserve">See [[WN:REV]] for information on the relevant policy.
+{{Documentation subpage}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS AT THE BOTTOM OF THIS PAGE --&gt;
+
+----
+This template sorts articles into [[:Category:Review]]. Some [[special:preferences|gadgets]] make special use of articles tagged with this template. If your article is time critical, consider adding {{tl|quick review}} or {{tl|breaking review}}.
+
+It looks like this:
+{{review/live|nocat=demo}}
+
+== Internals ==
+The main template checks whether the request for review should be disabled (with an error message); if not disabled, it passes the request through to subtemplate {{tl|review/live}}.
+
+&lt;includeonly&gt;
+&lt;!-- CATEGORIES AND INTERWIKIS HERE, THANKS --&gt;
+
+[[Category:Article templates|Review]]
+
+[[es:Plantilla:Revisar]]
+[[fa:الگو:مرور]]
+[[ja:Template:査読中]]
+[[tr:Şablon:Gözden geçir]]
+&lt;/includeonly&gt;</text>
+      <sha1>j8n947424d9n2nx3d9ags07m0o8qgoz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Source/doc</title>
+    <ns>10</ns>
+    <id>131859</id>
+    <revision>
+      <id>4889779</id>
+      <parentid>4878940</parentid>
+      <timestamp>2025-10-20T14:04:37Z</timestamp>
+      <contributor>
+        <username>Michael.C.Wright</username>
+        <id>1936983</id>
+      </contributor>
+      <comment>suggest using (date of access) when no publication date is provided.</comment>
+      <origin>4889779</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4047" sha1="9sycnnizu8o73h3qemxxpb392vlp8sj" xml:space="preserve">{{Documentation subpage}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS AT THE BOTTOM OF THIS PAGE --&gt;
+{{possible-risk}}
+;See [[Wikinews:Style guide#Citing_your_references|Wikinews:Style guide]] for more information on citing your sources.
+
+=== Usage ===
+&lt;pre&gt;&lt;nowiki&gt;
+*{{source
+ |url        = 
+ |title      = 
+ |author     = 
+ |pub        = 
+ |date       = 
+ |archiveurl = 
+}}
+&lt;/nowiki&gt;&lt;/pre&gt;
+
+;Example
+&lt;pre&gt;
+*{{source
+ |url        = https://www.bbc.co.uk/news/world-asia-58223231
+ |title      = Afghanistan conflict: Taliban push into Kabul as Ghani flees
+ |author     =
+ |pub        = BBC News Online
+ |date       = August 15, 2021
+ |archiveurl = https://web.archive.org/web/20210815165730/https://www.bbc.com/news/world-asia-58223231
+}}
+&lt;/pre&gt;
+This will display as follows:
+*{{source
+ |url        = https://www.bbc.co.uk/news/world-asia-58223231
+ |title      = Afghanistan conflict: Taliban push into Kabul as Ghani flees
+ |author     =
+ |pub        = BBC News Online
+ |date       = August 15, 2021
+ |archiveurl = https://web.archive.org/web/20210815165730/https://www.bbc.com/news/world-asia-58223231
+}}
+
+*If you cannot find the author of a source, leave that field blank. Do not use 'staff reporter' or similar.  List syndicate in the author field.  Wikilink people and syndicates in this field when there's a target, local or non-local.
+*Put in a (second level) section labeled Sources (&lt;code&gt;&lt;nowiki&gt;==Sources==&lt;/nowiki&gt;&lt;/code&gt;).
+*Format date as shown above. If no publication date is provided, indicate the date the website was accessed, i.e., &lt;code&gt;October 20, 2025 (date of access)&lt;/code&gt;
+*Always try to cite multiple independent sources.
+*Articles that don't provide a URL are listed at [[:Category:Articles with broken source templates]].
+*[[:Category:Citation templates]] lists templates for offline news sources.
+*For unsupported URL schemas (like mms:) use ''brokenURL=true''.
+*For publications (the 'pub=' or 'publisher=' parameter) please specify the exact same name under which the publication appears on [[w:Main page|Wikipedia]].
+*On those rare occasions when publication name should differ from publication link target, use additional parameter 'pubtarget='.  You can also use this to specify a target project other than English Wikipedia.
+*For an unavailable source (''brokenURL=true'') of an archived article, you may provide information about archival copies of the source using 'archiveurl=' and 'archivedescription='.
+*Note: when ''brokenURL=true'', [archived version] appears, linking to archiveurl only ''after'' the article is protected. 
+*For an author field in ALL CAPS, that cannot be remediated by means such as described [[Template:Source/ucauthor/doc#Avoiding this template|under subtemplate {{(*|2}}source/ucauthor{{*)|2}}]], and necessarily ''should'' be in ALL CAPS for reasons idiosyncratic to this particular citation rather than a general exception better addressed by {{tl|source/ucauthor}}, specify the precise acceptable value for the field as a 'cased author=' parameter.
+*For a non-English source, use the 'lang=' parameter, naming the language or its language code as supported by [[:Category:Language templates]] or corresponding language-code redirects.
+*For a video, use ''medium=video''.  Also available, ''medium=audio'' (but as of this writing, not used anywhere), ''medium=pdf'', ''medium=word''.
+*For a source also available as a file on Wikimedia Commons, use the 'commons=' parameter, naming the file (without the &lt;code&gt;File:&lt;/code&gt; prefix).
+
+;Note: you should always cite more than one source. Do not list multiple publications with the same wire report; instead try to list the originating location.
+
+=== See also ===
+* {{tl|source/archived}}
+* {{tl|source/broken}}
+* {{tl|source/commons}}
+* {{tl|source/fixauthor}}
+* {{tl|source/lang}}
+* {{tl|source/medium}}
+* {{tl|source/nourl}}
+* {{tl|source/pub}}
+* {{tl|source/uc?}}
+* {{tl|source/ucauthor}}
+
+&lt;includeonly&gt;
+&lt;!-- CATEGORIES AND INTERWIKIS HERE, THANKS --&gt;
+
+[[Category:Citation templates|Source]]
+[[ja:Template:Source-en]]
+
+&lt;/includeonly&gt;</text>
+      <sha1>9sycnnizu8o73h3qemxxpb392vlp8sj</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Mbox</title>
+    <ns>10</ns>
+    <id>124203</id>
+    <revision>
+      <id>4256491</id>
+      <parentid>1212436</parentid>
+      <timestamp>2016-10-19T16:56:27Z</timestamp>
+      <contributor>
+        <username>Pi zero</username>
+        <id>39076</id>
+      </contributor>
+      <comment>xambox</comment>
+      <origin>4256491</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="599" sha1="8ga94obhtvko7eakc2ij569sk0j4p2d" xml:space="preserve">{{
+  {{namespace detect 
+  | demospace = {{{demospace|}}}
+  | main      = xambox
+  | talk      = tmbox
+  | file      = imbox
+  | category  = cmbox
+  | other     = ombox
+  }}
+| type       = {{{type|}}}
+| image      = {{{image|}}}
+| imageright = {{{imageright|}}}
+| style      = {{{style|}}}
+| textstyle  = {{{textstyle|}}}
+| text       = {{{text}}}
+| small      = {{{small|}}}
+| smallimage = {{{smallimage|}}}
+| smallimageright = {{{smallimageright|}}}
+| smalltext  = {{{smalltext|}}}
+}}&lt;noinclude&gt;
+
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+      <sha1>8ga94obhtvko7eakc2ij569sk0j4p2d</sha1>
+    </revision>
+  </page>
+</mediawiki>
