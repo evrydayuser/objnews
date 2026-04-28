@@ -1,2 +1,4 @@
 # Objnews Alpha 
-Test
+
+### Latest Reports
+* [Test post](./articles/firstarticle.md)
