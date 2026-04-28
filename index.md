@@ -1,4 +1,4 @@
 # Objnews Alpha 
 
 ### Latest Reports
-* [Test post](./articles/firstarticle.md)
+* [Test post](./_posts/2026-04-28-test-post.md)
