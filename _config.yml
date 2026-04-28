@@ -1,6 +1,6 @@
 title: Objnews
 theme: jekyll-theme-minimal
-
+baseurl: "/objnews"
 collections:
   articles:
     output: true
