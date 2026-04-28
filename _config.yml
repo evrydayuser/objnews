@@ -4,11 +4,11 @@ theme: jekyll-theme-minimal
 collections:
   articles:
     output: true
-    permalink: /:title/ # This makes the URL objnews.com/first-post/ (cleaner)
+    permalink: /:title/
 
 defaults:
   - scope:
       path: ""
       type: "articles"
     values:
-      layout: "default" # This saves you from typing 'layout: default' in every file
+      layout: "default"
