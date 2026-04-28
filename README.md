@@ -1,2 +1,0 @@
-# objnews
-Another News Wiki
