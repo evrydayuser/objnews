@@ -1,4 +1,7 @@
 # Objnews Alpha 
 
 ### Latest Reports
-* [Test post](./posts/2026-04-28-test-post.md)
+### Latest Articles
+{% for item in site.articles %}
+* [{{ item.title }}]({{ item.url }})
+{% endfor %}
