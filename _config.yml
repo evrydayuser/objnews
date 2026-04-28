@@ -2,4 +2,4 @@ theme: jekyll-theme-cayman
 collections:
   articles:
     output: true
-    permalink: /_articles/:path/
+    permalink: _articles/:path/
