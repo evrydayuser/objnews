@@ -1,6 +1,6 @@
+title: Objnews
+description: Alpha
 theme: jekyll-theme-minimal
-
-github: [show_downloads: false]
 collections:
   articles:
     output: true
