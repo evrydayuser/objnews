@@ -1,7 +1,17 @@
 title: Objnews
 description: Alpha
 theme: jekyll-theme-minimal
+title: Objnews
+theme: jekyll-theme-minimal
+
 collections:
   articles:
     output: true
-    permalink: /articles/:path/
+    permalink: /:title/ # This makes the URL objnews.com/first-post/ (cleaner)
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "default" # This saves you from typing 'layout: default' in every file
