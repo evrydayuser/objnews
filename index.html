@@ -4,137 +4,86 @@ title: Home
 ---
 
 <style>
-     .hero-banner {
-
+  .hero-banner {
     background: #1a1a1a;
-
     color: #fff;
-
     padding: 40px 20px;
-
     text-align: center;
-
     border-bottom: 5px solid #d33;
-
     margin-bottom: 30px;
-
   }
-
   .wire-container {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 15px;
-
   }
-
   .news-card {
-
     border-left: 5px solid #333;
-
     padding: 15px;
-
     background: #f9f9f9;
-
     transition: 0.2s;
-
     text-decoration: none;
-
     color: #000;
-
     display: block;
-
   }
-
   .news-card:hover {
-
     background: #f0f0f0;
-
     border-left-color: #d33;
-
   }
-
   .news-date {
-
     font-size: 0.8rem;
-
     color: #666;
-
     text-transform: uppercase;
-
     font-weight: bold;
-
   }
-
   .news-title {
-
     font-size: 1.4rem;
-
     margin: 5px 0;
-
     font-family: "serif";
-
   }
-
   .badge-review {
-
     background: #d33;
-
     color: white;
-
     padding: 2px 8px;
-
     font-size: 0.7rem;
-
     border-radius: 3px;
-
     vertical-align: middle;
-
   }
 
-  .pagination {
-    margin-top: 40px;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #eee;
+  .search-gate {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
   }
-
-  .btn-next {
-    display: inline-block;
-    padding: 10px 25px;
-    background: #1a1a1a;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
+  #wireSearch {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    border: 3px solid #1a1a1a;
+    background: #fff;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    outline: none;
+    text-transform: uppercase;
   }
-
-  .btn-next:hover {
-    background: #d33;
+  #wireSearch:focus {
+    border-color: #d33;
   }
-
-  .footer-meta {
+  .terminal-footer {
     margin-top: 60px;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
-    font-size: 0.7rem;
-    color: #999;
+    border-top: 1px solid #ddd;
+  }
+  .about-link {
+    color: #d33;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
     letter-spacing: 1px;
   }
-
-  .footer-meta a {
-    color: #666;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-  }
-
-  .footer-meta a:hover {
-    border-bottom: 1px solid #d33;
-    color: #333;
+  .about-link:hover {
+    text-decoration: underline;
   }
 </style>
 
@@ -143,39 +92,43 @@ title: Home
   <p style="margin:5px 0 0 0; opacity: 0.8;">News Intelligence</p>
 </div>
 
-<div class="wire-container">
-  {% for post in paginator.posts %}
+<div class="search-gate">
+  <input type="text" id="wireSearch" placeholder="SEARCH WIRE..." onkeyup="filterWire()">
+</div>
+
+<div class="wire-container" id="wireContainer">
+  {% for post in site.posts %}
   <a href="{{ post.url | relative_url }}" class="news-card">
     <div class="news-date">{{ post.date | date: "%B %d, %Y" }}</div>
     <div class="news-title">
       {{ post.title }} 
       {% if post.status == 'review' %}<span class="badge-review">UNDER REVIEW</span>{% endif %}
     </div>
-    <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
   </a>
   {% endfor %}
   
-  {% if paginator.total_posts == 0 %}
-  <div class="news-card">
-    <div class="news-date">SYSTEM MESSAGE</div>
-    <div class="news-title">No articles found in _posts/</div>
-    <p>Check your naming convention: YYYY-MM-DD-title.md</p>
+  {% if site.posts.size == 0 %}
+  <div class="news-card" style="border-left-color: #d33;">
+    <div class="news-date">SYSTEM HALT</div>
+    <div class="news-title">NULL DATABASE</div>
+    <p>Zero reports detected in _posts directory.</p>
   </div>
   {% endif %}
 </div>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="btn-next" href="{{ paginator.next_page_path | relative_url }}">OLDER REPORTS →</a>
-  {% else %}
-    <span style="color: #ccc; font-size: 0.8rem;">END OF WIRE</span>
-  {% endif %}
+<div class="terminal-footer">
+  <a href="{{ '/about/' | relative_url }}" class="about-link">ABOUT THE MONOLITH</a>
 </div>
-{% endif %}
 
-<div class="footer-meta">
-  <a href="{{ '/about/' | relative_url }}">ABOUT OBJNEWS</a> 
-  <span style="margin: 0 10px;">|</span>
-  <span style="text-transform: uppercase;">Build 2026.04.29</span>
-</div>
+<script>
+function filterWire() {
+  const query = document.getElementById('wireSearch').value.toLowerCase();
+  const entries = document.getElementsByClassName('news-card');
+
+  for (let i = 0; i < entries.length; i++) {
+    const content = entries[i].textContent.toLowerCase();
+    entries[i].style.display = content.includes(query) ? "" : "none";
+  }
+}
+</script>
