@@ -4,7 +4,7 @@ title: Home
 ---
 
 <style>
-  
+
   .hero-banner {
     background: #1a1a1a;
     color: #fff;
@@ -50,7 +50,7 @@ title: Home
     border-radius: 3px;
     vertical-align: middle;
   }
-
+  
   .search-gate {
     margin-bottom: 30px;
     display: flex;
@@ -71,28 +71,24 @@ title: Home
     border-color: #d33;
   }
 
-  .archive-hidden {
-    display: none; 
-  }
-
   .archive-btn-container {
     text-align: center;
-    margin-top: 30px;
+    margin: 40px 0;
   }
-
-  .archive-btn {
+  .archive-link {
     background: #1a1a1a;
     color: #fff;
     padding: 15px 30px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: inline-block;
+    transition: 0.2s;
   }
-
-  .archive-btn:hover {
+  .archive-link:hover {
     background: #d33;
+    color: white;
   }
 
   .terminal-footer {
@@ -116,13 +112,12 @@ title: Home
 </div>
 
 <div class="search-gate">
-  <input type="text" id="wireSearch" placeholder="SEARCH WIRE..." onkeyup="filterWire()">
+  <input type="text" id="wireSearch" placeholder="SEARCH RECENT WIRE..." onkeyup="filterWire()">
 </div>
 
 <div class="wire-container" id="wireContainer">
-  {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}" 
-       class="news-card {% if forloop.index > 5 %}archive-hidden{% endif %}">
+  {% for post in site.posts limit:5 %}
+    <a href="{{ post.url | relative_url }}" class="news-card">
       <div class="news-date">{{ post.date | date: "%B %d, %Y" }}</div>
       <div class="news-title">
         {{ post.title }} 
@@ -131,11 +126,19 @@ title: Home
       <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
     </a>
   {% endfor %}
+
+  {% if site.posts.size == 0 %}
+  <div class="news-card" style="border-left-color: #d33;">
+    <div class="news-date">SYSTEM HALT</div>
+    <div class="news-title">NULL DATABASE</div>
+    <p>Zero reports detected in _posts directory.</p>
+  </div>
+  {% endif %}
 </div>
 
 {% if site.posts.size > 5 %}
-<div class="archive-btn-container" id="archiveToggle">
-  <button class="archive-btn" onclick="revealArchive()">ACCESS FULL ARCHIVE</button>
+<div class="archive-btn-container">
+  <a href="{{ '/archive/' | relative_url }}" class="archive-link">ACCESS FULL ARCHIVE</a>
 </div>
 {% endif %}
 
@@ -144,32 +147,14 @@ title: Home
 </div>
 
 <script>
-let archiveRevealed = false;
-
-function revealArchive() {
-  archiveRevealed = true;
-  document.getElementById('archiveToggle').style.display = 'none';
-  
-  filterWire();
-}
-
 function filterWire() {
   const query = document.getElementById('wireSearch').value.toLowerCase();
   const entries = document.getElementsByClassName('news-card');
 
   for (let i = 0; i < entries.length; i++) {
     const content = entries[i].textContent.toLowerCase();
-    const isHiddenArchive = entries[i].classList.contains('archive-hidden');
-    
-    if (query.length > 0) {
-      entries[i].style.display = content.includes(query) ? "" : "none";
-    } else {
-      if (isHiddenArchive && !archiveRevealed) {
-        entries[i].style.display = "none";
-      } else {
-        entries[i].style.display = "";
-      }
-    }
+
+    entries[i].style.display = content.includes(query) ? "" : "none";
   }
 }
 </script>
