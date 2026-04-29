@@ -1,0 +1,246 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+
+<style>
+  
+<style>
+
+
+  .hero-banner {
+
+    background: #1a1a1a;
+
+    color: #fff;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border-bottom: 5px solid #d33;
+
+    margin-bottom: 30px;
+
+  }
+
+  .wire-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+  .news-card {
+
+    border-left: 5px solid #333;
+
+    padding: 15px;
+
+    background: #f9f9f9;
+
+    transition: 0.2s;
+
+    text-decoration: none;
+
+    color: #000;
+
+    display: block;
+
+  }
+
+  .news-card:hover {
+
+    background: #f0f0f0;
+
+    border-left-color: #d33;
+
+  }
+
+  .news-date {
+
+    font-size: 0.8rem;
+
+    color: #666;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+  }
+
+  .news-title {
+
+    font-size: 1.4rem;
+
+    margin: 5px 0;
+
+    font-family: "serif";
+
+  }
+
+  .badge-review {
+
+    background: #d33;
+
+    color: white;
+
+    padding: 2px 8px;
+
+    font-size: 0.7rem;
+
+    border-radius: 3px;
+
+    vertical-align: middle;
+
+  }
+
+
+  .search-gate {
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+
+  #wireSearch {
+
+    width: 100%;
+
+    max-width: 800px;
+
+    padding: 15px;
+
+    border: 3px solid #1a1a1a;
+
+    background: #fff;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-weight: bold;
+
+    outline: none;
+
+    text-transform: uppercase;
+
+  }
+
+  #wireSearch:focus {
+
+    border-color: #d33;
+
+  }
+
+
+  .archive-hidden {
+
+    display: none; /* Initially hide older posts */
+
+  }
+
+
+  .archive-btn-container {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+  }
+
+
+  .archive-btn {
+
+    background: #1a1a1a;
+
+    color: #fff;
+
+    padding: 15px 30px;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+  }
+
+
+  .archive-btn:hover {
+
+    background: #d33;
+
+  }
+
+
+  .terminal-footer {
+
+    margin-top: 60px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #ddd;
+
+  }
+
+  .about-link {
+
+    color: #d33;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+  }
+  
+</style>
+
+<div class="hero-banner">
+  <h1 style="margin:0; letter-spacing: 2px;">THE VAULT</h1>
+  <p style="margin:5px 0 0 0; opacity: 0.8;">Historical Wire Data</p>
+</div>
+
+<div class="search-gate">
+  <input type="text" id="wireSearch" placeholder="SEARCH ALL RECORDS..." onkeyup="filterWire()">
+</div>
+
+<div class="wire-container" id="wireContainer">
+  {% for post in site.posts %}
+  <a href="{{ post.url | relative_url }}" class="news-card">
+    <div class="news-date">{{ post.date | date: "%B %d, %Y" }}</div>
+    <div class="news-title">{{ post.title }}</div>
+    <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="terminal-footer">
+  <a href="{{ '/' | relative_url }}" class="about-link">← BACK TO LATEST WIRE</a>
+</div>
+
+<script>
+function filterWire() {
+  const query = document.getElementById('wireSearch').value.toLowerCase();
+  const entries = document.getElementsByClassName('news-card');
+  for (let i = 0; i < entries.length; i++) {
+    const content = entries[i].textContent.toLowerCase();
+    entries[i].style.display = content.includes(query) ? "" : "none";
+  }
+}
+</script>
