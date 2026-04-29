@@ -4,6 +4,7 @@ title: Home
 ---
 
 <style>
+  
   .hero-banner {
     background: #1a1a1a;
     color: #fff;
@@ -69,6 +70,31 @@ title: Home
   #wireSearch:focus {
     border-color: #d33;
   }
+
+  .archive-hidden {
+    display: none; 
+  }
+
+  .archive-btn-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .archive-btn {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .archive-btn:hover {
+    background: #d33;
+  }
+
   .terminal-footer {
     margin-top: 60px;
     padding: 40px 20px;
@@ -81,9 +107,6 @@ title: Home
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 1px;
-  }
-  .about-link:hover {
-    text-decoration: underline;
   }
 </style>
 
@@ -98,37 +121,55 @@ title: Home
 
 <div class="wire-container" id="wireContainer">
   {% for post in site.posts %}
-  <a href="{{ post.url | relative_url }}" class="news-card">
-    <div class="news-date">{{ post.date | date: "%B %d, %Y" }}</div>
-    <div class="news-title">
-      {{ post.title }} 
-      {% if post.status == 'review' %}<span class="badge-review">UNDER REVIEW</span>{% endif %}
-    </div>
-    <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
-  </a>
+    <a href="{{ post.url | relative_url }}" 
+       class="news-card {% if forloop.index > 5 %}archive-hidden{% endif %}">
+      <div class="news-date">{{ post.date | date: "%B %d, %Y" }}</div>
+      <div class="news-title">
+        {{ post.title }} 
+        {% if post.status == 'review' %}<span class="badge-review">UNDER REVIEW</span>{% endif %}
+      </div>
+      <p style="margin:0; color: #444;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    </a>
   {% endfor %}
-  
-  {% if site.posts.size == 0 %}
-  <div class="news-card" style="border-left-color: #d33;">
-    <div class="news-date">SYSTEM HALT</div>
-    <div class="news-title">NULL DATABASE</div>
-    <p>Zero reports detected in _posts directory.</p>
-  </div>
-  {% endif %}
 </div>
 
+{% if site.posts.size > 5 %}
+<div class="archive-btn-container" id="archiveToggle">
+  <button class="archive-btn" onclick="revealArchive()">ACCESS FULL ARCHIVE</button>
+</div>
+{% endif %}
+
 <div class="terminal-footer">
-<a href="{{ '/about/' | relative_url }}" class="about-link">ABOUT</a>
+  <a href="{{ '/about/' | relative_url }}" class="about-link">ABOUT</a>
 </div>
 
 <script>
+let archiveRevealed = false;
+
+function revealArchive() {
+  archiveRevealed = true;
+  document.getElementById('archiveToggle').style.display = 'none';
+  
+  filterWire();
+}
+
 function filterWire() {
   const query = document.getElementById('wireSearch').value.toLowerCase();
   const entries = document.getElementsByClassName('news-card');
 
   for (let i = 0; i < entries.length; i++) {
     const content = entries[i].textContent.toLowerCase();
-    entries[i].style.display = content.includes(query) ? "" : "none";
+    const isHiddenArchive = entries[i].classList.contains('archive-hidden');
+    
+    if (query.length > 0) {
+      entries[i].style.display = content.includes(query) ? "" : "none";
+    } else {
+      if (isHiddenArchive && !archiveRevealed) {
+        entries[i].style.display = "none";
+      } else {
+        entries[i].style.display = "";
+      }
+    }
   }
 }
 </script>
